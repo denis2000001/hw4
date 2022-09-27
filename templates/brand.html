@@ -1,0 +1,16 @@
+{% extends 'main.html' %}
+{% block brands %}
+    <div>
+        {% for brand in brands %}
+            <div>
+                <img src="/media/{{ brand.logo }}" alt="" style="width: 50px ; height: 50px">
+                <h5>{{ brand.name_brand }}</h5>
+                <a href="/brands/{{ brand.id }}/">
+                    <p >
+                        More
+                    </p>
+                </a>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}

@@ -1,0 +1,34 @@
+{% extends 'main.html' %}
+{% block  model %}
+    <style type="text/css">
+        .post_block {
+
+        }
+        .post_block h1 {
+            text-align: center;
+            color: #242b2e;
+        }
+        .post_block h5 {
+            text-align: center;
+            color: #242b2e;
+        }
+    </style>
+    <div class="post_block">
+        <h1>{{ brand.name_brand }}</h1>
+    </div>
+    <div class="comments">
+        {% for model in models %}
+            <div>
+                <img src="/media/{{ model.model_photo }}" alt="" style="width: 400px ; height: 200px">
+                <h3 style="color: purple">Модель: {{ model.name }}</h3>
+                <h5>{{ model.engine }}</h5>
+                <h6>{{ model.hp }}</h6>
+                <h2>{{ model.hp }}</h2>
+                <button>
+                    <a href="model/{{ model.id }}">Series</a>
+                </button>
+            </div>
+        {% endfor %}
+
+    </div>
+{% endblock %}

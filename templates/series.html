@@ -1,0 +1,29 @@
+{% extends 'main.html' %}
+
+
+{% block  series %}
+    <style type="text/css">
+        .post_block {
+
+        }
+        .post_block h1 {
+            text-align: center;
+            color: #242b2e;
+        }
+        .post_block h5 {
+            text-align: center;
+            color: #242b2e;
+        }
+    </style>
+    <div class="model_block">
+        <h1>{{ models.name }}</h1>
+    </div>
+    <div class="series_details">
+        {% for seria in series %}
+            <div>
+                <img src="/media/{{ seria.series_photo }}" alt="" style="width: 400px ; height: 200px">
+                <h5>Серии {{ seria.series_name }}</h5>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}
